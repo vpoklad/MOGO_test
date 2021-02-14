@@ -39,7 +39,7 @@ h6 {
   width: 100%;
   max-width: 880px;
   margin: 0 auto;
-  padding-top: 170px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -147,11 +147,15 @@ h6 {
 }
 
 /* slider */
-.slider {
+.slider-contanier {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.slider_inner {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  padding: 80px 0 0 30px;
 }
 
 .slider_item {
