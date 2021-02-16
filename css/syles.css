@@ -16,7 +16,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 hr {
@@ -25,6 +26,7 @@ hr {
   height: 1px;
   background-color: #e5e5e5;
   border: 0;
+  margin: 40px 0;
 }
 .container {
   width: 100%;
@@ -200,6 +202,17 @@ hr {
 .section {
   padding: 80px 0;
 }
+.section--devices {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  background: url('../img/device_bg.jpg') center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.section--gray {
+  background-color: #f8f8f8;
+}
 
 .section_header {
   width: 100%;
@@ -344,4 +357,162 @@ hr {
   line-height: 1.6;
   font-weight: normal;
   color: #999;
+}
+
+/* devices */
+.devices {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.devices_item {
+  display: block;
+}
+.devices_item--iphone {
+  position: absolute;
+  right: -30px;
+  bottom: -81px;
+  z-index: 1;
+}
+
+/* what we do */
+.wedo {
+  display: flex;
+}
+.wedo_item {
+  flex: 1 1 0;
+}
+
+/* accordion */
+.accordion_item {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+.accordion_item.active .accordion_contet {
+  display: block;
+}
+
+.accordion_item.active .accordion_header:after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.accordion_item.active .accordion_header {
+  border-bottom-color: #e5e5e5;
+}
+.accordion_header {
+  border-bottom: 1px solid transparent;
+  padding: 15px 20px 15px 65px;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion_header:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.accordion_icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.accordion_title {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.accordion_contet {
+  display: none;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #999;
+}
+
+/* reviews */
+.reviews {
+  padding: 0 110px;
+  position: relative;
+}
+
+.review-button {
+  font-size: 0;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.review-button::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+}
+.review-button--next {
+  left: 0;
+  transform: rotate(-45deg);
+}
+.review-button--prev {
+  right: 0;
+  transform: rotate(135deg);
+}
+
+.reviews_item {
+  padding-left: 205px;
+  position: relative;
+}
+
+.review_img {
+  border: 1px solid #95e1d3;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.review_text {
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #999;
+}
+
+.review_author {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: normal;
+  font-size: 24px;
+  color: #333;
+}
+
+.review_author::before {
+  display: inline-block;
+  content: '';
+  vertical-align: middle;
+  width: 60px;
+  height: 1px;
+  background-color: #f38181;
+  margin-right: 10px;
 }
