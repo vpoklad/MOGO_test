@@ -572,5 +572,8 @@ hr {
 .logos {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.logo_item;
+.logo_item {
+opacity: 60%;
+}
