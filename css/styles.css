@@ -209,9 +209,13 @@ hr {
   -webkit-background-size: cover;
   background-size: cover;
 }
-
 .section--gray {
   background-color: #f8f8f8;
+}
+.section--clients {
+  background: url('../img/clients_bg.jpg') no-repeat;
+  block-size: cover;
+  margin-bottom: 130px;
 }
 
 .section_header {
@@ -499,12 +503,13 @@ hr {
 }
 
 .reviews_item {
-  padding-left: 205px;
+  padding-left: 240px;
   position: relative;
 }
 
 .review_img {
   border: 1px solid #95e1d3;
+  border-radius: 50%;
   position: absolute;
   left: 0;
   top: 50%;
@@ -575,5 +580,121 @@ hr {
   align-items: center;
 }
 .logo_item {
-opacity: 60%;
+  max-width: 100%;
+  height: auto;
+  opacity: 60%;
+}
+
+/* works */
+.works {
+  display: flex;
+}
+
+.wokrs_col {
+  flex: 1 1 0;
+}
+
+.works_item {
+  position: relative;
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+.works_item:hover .works_img {
+  opacity: 0.1;
+}
+.works_item:hover .works_info {
+  opacity: 1;
+}
+
+.works_img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.works_info {
+  width: 100%;
+  padding: 0 15px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.works_icon {
+  line-height: 1;
+  font-size: 31px;
+  margin-bottom: 10px;
+}
+.works_title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.works_text {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+/* Clients */
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clients_item {
+  width: 50%;
+  padding: 0 45px 80px 180px;
+  position: relative;
+}
+.client_img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  z-index: 1;
+}
+
+.clients_name {
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.clients_prof {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: normal;
+  margin-bottom: 45px;
+}
+.clients_prof::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin-top: 15px;
+}
+
+.clients_text {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: normal;
+  color: #999;
 }
