@@ -199,6 +199,9 @@ hr {
   font-size: 24;
   font-weight: 800;
 }
+.page {
+  overflow: hidden;
+}
 
 /* Section */
 .section {
@@ -216,7 +219,7 @@ hr {
 }
 .section--clients {
   background: url('../img/clients_bg.jpg') center no-repeat;
-  block-size: cover;
+  background-size: cover;
 }
 .section--map {
   padding: 40px;
@@ -535,13 +538,16 @@ hr {
 }
 
 .review_img {
+  display: block;
+  width: 210px;
+  height: 210px;
   border: 1px solid #95e1d3;
   border-radius: 50%;
   position: absolute;
   left: 0;
   top: 50%;
-  z-index: 1;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .review_text {
@@ -605,13 +611,17 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 -15px;
 }
-.logo_item {
+.logos_item {
+  padding: 0 15px;
+}
+.logos_img {
+  display: block;
   max-width: 100%;
   height: auto;
-  opacity: 60%;
+  opacity: 0.6;
 }
-
 /* works */
 .works {
   display: flex;
@@ -646,7 +656,7 @@ hr {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
   z-index: 1;
   text-align: center;
   color: #fff;
@@ -729,6 +739,7 @@ hr {
 /* Blog */
 .blog {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -843,17 +854,22 @@ hr {
 
 .footer_inner {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 65px;
   justify-content: space-between;
+  margin: 0 -15px;
+}
+.footer_col {
+  padding: 0 15px;
 }
 
-.footer_col-first {
+.footer_col--first {
   width: 40%;
 }
-.footer_col-second {
+.footer_col--second {
   width: 27%;
 }
-.footer_col-third {
+.footer_col--third {
   width: 23%;
 }
 .footer_logo {
@@ -991,16 +1007,18 @@ hr {
 /* instagram */
 .instagram {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .instagram_item {
-  flex: 1 1 0;
-  border: 1px solid #fff;
+  width: 33%;
+  border-bottom: 1px solid #fff;
 }
 .instagram_item img {
   display: block;
+  max-width: 100%;
 }
 .instagram_subtitle {
   font-family: 'Roboto', sans-serif;
@@ -1034,6 +1052,10 @@ hr {
   .intro_suptitle {
     font-size: 50px;
   }
+  /* reviews */
+  .review_text {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -1065,6 +1087,51 @@ hr {
   }
   .service_items--border {
     border-bottom: 0;
+  }
+  /* reviews */
+  .reviews {
+    padding: 0 60px;
+  }
+  .review_img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .reviews_item {
+    padding-left: 175px;
+  }
+
+  /* Clients */
+  .clients {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .clients_item {
+    width: 100%;
+    padding-right: 0;
+  }
+  .clients_item:last-child {
+    padding-bottom: 0;
+  }
+
+  /* footer */
+  .footer_col--first {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer_col--second {
+    width: 50%;
+  }
+  .footer_col--third {
+    width: 50%;
+  }
+  /* instagrm */
+  .instagram {
+    justify-content: flex-start;
+  }
+  .instagram_item {
+    width: auto;
+    border-right: 1px solid #fff;
   }
 }
 
@@ -1123,6 +1190,51 @@ hr {
   .wedo_item {
     width: 100%;
   }
+  /* reviews */
+  .review_img {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transform: none;
+  }
+
+  .reviews_item {
+    padding-left: 0;
+  }
+  .review_text {
+    font-size: 16px;
+  }
+  .review_author {
+    font-size: 16px;
+  }
+  /* works */
+  .works {
+    flex-wrap: wrap;
+  }
+
+  .wokrs_col {
+    flex: none;
+    width: 50%;
+  }
+
+  /* Blog */
+  .blog {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .blog_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .blog_item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* footer */
+  .footer_col--second,
+  .footer_col--third {
+    width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1165,5 +1277,58 @@ hr {
     width: 180px;
     bottom: -50px;
     right: -70px;
+  }
+  /* reviews */
+  .reviews {
+    padding: 0;
+  }
+  .review-button {
+    top: 18%;
+  }
+  /* Logos */
+  .logos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .logos_item {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  .logos_img {
+    margin: 0 auto;
+  }
+
+  /* Works */
+  .wokrs_col {
+    width: 100%;
+  }
+  .works_img {
+    max-width: none;
+  }
+
+  /* Clients */
+  .client_img {
+    position: static;
+  }
+  .clients_item {
+    padding-left: 0;
+    text-align: center;
+  }
+  .clients_prof::after {
+    margin: 10px auto;
+  }
+
+  /* Subscribe */
+  .subscribe {
+    flex-wrap: wrap;
+    max-width: none;
+  }
+  .subscribe_input {
+    border-right: 1px solid #e7e7e7;
+    margin-bottom: 10px;
+  }
+  .subscribe_input,
+  .subscribe_button {
+    width: 100%;
   }
 }
