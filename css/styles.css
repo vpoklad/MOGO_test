@@ -629,7 +629,6 @@ hr {
 
 .wokrs_col {
   flex: 1 1 0;
-  
 }
 
 .works_item {
@@ -938,7 +937,7 @@ hr {
   padding: 15px;
 }
 .subscribe_input::placeholder {
-  color: #ececec;
+  color: #95e1d3;
 }
 .subscribe_input:focus {
   outline: none;
