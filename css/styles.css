@@ -629,9 +629,11 @@ hr {
 
 .wokrs_col {
   flex: 1 1 0;
+  
 }
 
 .works_item {
+  margin: 0 auto;
   position: relative;
   background: linear-gradient(to bottom, #f38181, #fce38a);
 }
@@ -1304,6 +1306,9 @@ hr {
   }
   .works_img {
     max-width: none;
+  }
+  .works_item {
+    max-width: 480px;
   }
 
   /* Clients */
